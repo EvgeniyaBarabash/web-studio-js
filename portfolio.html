@@ -19,18 +19,20 @@
   <body>
     <!-- Шапка сайта -->
     <header>
-      <nav>
-        <a class="logo link" href="./index.html"><span class="web-logo">Web</span>Studio</a>
-        <ul class="site-nav list">
-          <li><a class="link" href="./index.html">Студия</a></li>
-          <li><a class="link current" href="./portfolio.html">Портфолио</a></li>
-          <li><a class="link" href="">Контакты</a></li>
+      <div class="container header-nav">
+        <nav class="header-nav">
+          <a class="logo link" href="./index.html"><span class="web-logo">Web</span>Studio</a>
+          <ul class="site-nav list">
+            <li class="item"><a class="link" href="./index.html">Студия</a></li>
+            <li class="item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
+            <li class="item"><a class="link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="tel-nav list">
+          <li class="item"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          <li class="item"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>
-      </nav>
-      <ul class="tel-nav list">
-        <li><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </header>
     <!-- Portfolio images -->
     <main>
@@ -99,16 +101,18 @@
     </main>
     <!-- Подвал -->
     <footer class="footer">
-      <a class="logo link" href="./index.html"
-        ><span class="web-logo">Web</span><span class="web-studio">Studio</span></a
-      >
-      <address>
-        <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
-        <ul class="footer list">
-          <li><a class="footer-link link" href="mailto:info@example.com">info@example.com</a></li>
-          <li><a class="footer-link link" href="tel:+380991111111">+38 099 111 11 11</a></li>
-        </ul>
-      </address>
+      <div class="container footer-nav">
+        <a class="logo link footer" href="./index.html"
+          ><span class="web-logo">Web</span><span class="web-studio">Studio</span></a
+        >
+        <address class="footer-address">
+          <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
+          <ul class="footer list">
+            <li class="footer-item"><a class="footer-link link" href="mailto:info@example.com">info@example.com</a></li>
+            <li class="footer-item"><a class="footer-link link" href="tel:+380991111111">+38 099 111 11 11</a></li>
+          </ul>
+        </address>
+      </div>
     </footer>
   </body>
 </html>
