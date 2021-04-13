@@ -9,6 +9,7 @@
   --main-font: 'Roboto', sans-serif;
   --title-font: 'Raleway', sans-serif;
   --footer-link-color: rgba(255, 255, 255, 0.6);
+  --card-set-gap: 30px;
 }
 
 body {
@@ -17,6 +18,20 @@ body {
   font-style: normal;
   color: var(--primery-text-color);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .link {
   color: inherit;
   text-decoration: none;
@@ -24,8 +39,22 @@ body {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  /* background-color: cyan; */
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .logo {
+  margin-right: 93px;
   color: #000000;
   font-family: var(--title-font);
   font-style: normal;
@@ -38,7 +67,14 @@ body {
   color: var(--accent-color);
 }
 /* site-nav ХЕДЕР*/
+.header-nav {
+  display: flex;
+  align-items: center;
+}
 .site-nav .link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -50,8 +86,21 @@ body {
 .site-nav .link.current {
   color: var(--accent-color);
 }
+.site-nav {
+  display: flex;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 
 /* tel nav ХЕДЕР */
+.tel-nav {
+  display: flex;
+  margin-left: auto;
+}
+.tel-nav .item + .item {
+  margin-left: 50px;
+}
 .tel-nav .link {
   color: var(--primery-text-color);
   font-weight: 500;
@@ -67,17 +116,19 @@ body {
 /* hero */
 .hero-section {
   background-color: var(--hero-bg-color);
+  text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
   color: var(--main-heading-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .btn {
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.89;
@@ -85,8 +136,11 @@ body {
   letter-spacing: 0.06em;
   color: var(--main-heading-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 /* Особенности */
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -97,7 +151,17 @@ body {
   width: 1px !important;
   overflow: hidden;
 }
+.features.list {
+  display: flex;
+}
+.features-item {
+  width: 270px;
+}
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
 .features-list-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -112,8 +176,15 @@ body {
   letter-spacing: 0.03em;
 }
 /* Чем мы занимаемся */
+.work {
+  display: flex;
+}
+.work-section {
+  padding-bottom: 94px;
+}
 .work-title,
 .comand-title {
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -121,11 +192,15 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.work-img:not(:last-child) {
+  margin-right: var(--card-set-gap);
+}
 /* Наша команда */
-.comand-section {
+.comand {
   background-color: var(--comand-bg-color);
 }
 .comand-title-list {
+  margin: 0;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -133,10 +208,36 @@ body {
   letter-spacing: 0.03em;
 }
 .comand-text {
+  margin-top: 10px;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+.comand.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-right: calc(-1 * var(--card-set-gap));
+}
+.comand.list > .item {
+  flex-basis: calc(100% / 4- var(--card-set-gap));
+  margin-right: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+  flex-wrap: wrap;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+}
+.comand.list > .item:nth-child(4n) {
+  margin-right: 0;
+}
+.comand-content {
+  text-align: center;
+  padding-top: var(--card-set-gap);
+  padding-bottom: var(--card-set-gap);
+  background-color: var(--main-heading-color);
 }
 
 /* Футер */
@@ -144,6 +245,7 @@ body {
   background-color: var(--hero-bg-color);
 }
 .footer-text {
+  margin: 0;
   color: var(--main-heading-color);
   font-style: normal;
   font-weight: 400;
@@ -162,6 +264,20 @@ body {
 .web-studio {
   color: var(--main-heading-color);
 }
+.footer-nav {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-address {
+  margin-top: 20px;
+}
+.footer-item {
+  margin-top: 9px;
+}
+.logo.link.footer {
+  margin: 0;
+}
+
 /* PORTFOLIO STYLLE */
 .portfolio-button {
   font-weight: 500;
