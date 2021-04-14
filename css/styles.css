@@ -43,8 +43,7 @@ img {
   margin: 0;
 }
 .container {
-  /* background-color: cyan; */
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -54,6 +53,8 @@ img {
   padding-bottom: 94px;
 }
 .logo {
+  display: inline-block;
+
   margin-right: 93px;
   color: #000000;
   font-family: var(--title-font);
@@ -70,6 +71,13 @@ img {
 .header-nav {
   display: flex;
   align-items: center;
+}
+.header-nav > .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.page-header {
+  border: 1px solid #ececec;
 }
 .site-nav .link {
   display: block;
@@ -119,7 +127,7 @@ img {
   text-align: center;
 }
 .hero-title {
-  margin-bottom: 30px;
+  margin-bottom: var(--card-set-gap);
   color: var(--main-heading-color);
   font-weight: 900;
   font-size: 44px;
@@ -158,7 +166,7 @@ img {
   width: 270px;
 }
 .features-item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: var(--card-set-gap);
 }
 .features-list-title {
   margin-bottom: 10px;
@@ -176,9 +184,6 @@ img {
   letter-spacing: 0.03em;
 }
 /* Чем мы занимаемся */
-.work {
-  display: flex;
-}
 .work-section {
   padding-bottom: 94px;
 }
@@ -194,6 +199,16 @@ img {
 }
 .work-img:not(:last-child) {
   margin-right: var(--card-set-gap);
+}
+.work.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-right: calc(-1 * var(--card-set-gap));
+}
+.work-img {
+  flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
+  margin-top: var(--card-set-gap);
 }
 /* Наша команда */
 .comand {
@@ -222,7 +237,7 @@ img {
   margin-right: calc(-1 * var(--card-set-gap));
 }
 .comand.list > .item {
-  flex-basis: calc(100% / 4- var(--card-set-gap));
+  flex-basis: calc((100% - 4 * var(--card-set-gap)) / 4);
   margin-right: var(--card-set-gap);
   margin-top: var(--card-set-gap);
   flex-wrap: wrap;
@@ -265,6 +280,7 @@ img {
   color: var(--main-heading-color);
 }
 .footer-nav {
+  width: 270px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -280,6 +296,8 @@ img {
 
 /* PORTFOLIO STYLLE */
 .portfolio-button {
+  display: inline-block;
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -289,6 +307,7 @@ img {
   background-color: var(--comand-bg-color);
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -296,6 +315,7 @@ img {
   background-color: var(--accent-color);
 }
 .portfolio-text {
+  margin: 0;
   color: var(--primery-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -303,9 +323,45 @@ img {
   letter-spacing: 0.03em;
 }
 .portfolio-title {
+  padding-bottom: 4px;
+  margin: 0;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+}
+
+.portfolio-btn {
+  display: flex;
+  justify-content: center;
+}
+.btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+.btn-nav {
+  text-align: center;
+}
+.portfolio-card {
+  margin-top: 50px;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-top: (-1 * var(--card-set-gap));
+  margin-left: (-1 * var(--card-set-gap));
+}
+.card-item {
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+}
+.card-item {
+  flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
+}
+.portfolio-content {
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
 }

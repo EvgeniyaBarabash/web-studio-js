@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header>
+    <header class="page-header">
       <div class="container header-nav">
         <nav class="header-nav">
           <a class="logo link" href="./index.html"><span class="web-logo">Web</span>Studio</a>
@@ -36,64 +36,83 @@
     </header>
     <!-- Portfolio images -->
     <main>
-      <section>
-        <h1 class="visually-hidden">Портфолио</h1>
-        <nav>
-          <ul class="list">
-            <li><button class="portfolio-button" type="button">Все</button></li>
-            <li><button class="portfolio-button" type="button">Веб-сайты</button></li>
-            <li><button class="portfolio-button" type="button">Приложения</button></li>
-            <li><button class="portfolio-button" type="button">Дизайн</button></li>
-            <li><button class="portfolio-button" type="button">Маркетинг</button></li>
-          </ul>
-        </nav>
-
-        <div>
-          <ul class="portfolio list">
-            <li>
+      <section class="section container">
+        <div class="btn-nav">
+          <h1 class="visually-hidden">Портфолио</h1>
+          <nav>
+            <ul class="portfolio-btn list">
+              <li class="btn-item"><button class="portfolio-button" type="button">Все</button></li>
+              <li class="btn-item"><button class="portfolio-button" type="button">Веб-сайты</button></li>
+              <li class="btn-item"><button class="portfolio-button" type="button">Приложения</button></li>
+              <li class="btn-item"><button class="portfolio-button" type="button">Дизайн</button></li>
+              <li class="btn-item"><button class="portfolio-button" type="button">Маркетинг</button></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="portfolio-card">
+          <ul class="card-set list">
+            <li class="card-item">
               <img src="./portfolio-images/img.jpg" alt="Технокряк" width="370" height="294" />
-              <h2 class="portfolio-title">Технокряк</h2>
-              <p class="portfolio-text">Веб-сайт</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Технокряк</h2>
+                <p class="portfolio-text">Веб-сайт</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-1.jpg" alt="Постер" width="370" height="294" />
-              <h2 class="portfolio-title">Постер New Orlean vs Golden Star</h2>
-              <p class="portfolio-text">Дизайн</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Постер New Orlean vs Golden Star</h2>
+                <p class="portfolio-text">Дизайн</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-2.jpg" alt="Ресторан Seafood" width="370" height="294" />
-              <h2 class="portfolio-title">Ресторан Seafood</h2>
-              <p class="portfolio-text">Приложение</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Ресторан Seafood</h2>
+                <p class="portfolio-text">Приложение</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-3.jpg" alt="Проект Prime" width="370" height="294" />
-              <h2 class="portfolio-title">Проект Prime</h2>
-              <p class="portfolio-text">Маркетинг</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Проект Prime</h2>
+                <p class="portfolio-text">Маркетинг</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-4.jpg" alt="Проект Boxes" width="370" height="294" />
-              <h2 class="portfolio-title">Проект Boxes</h2>
-              <p class="portfolio-text">Приложение</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Проект Boxes</h2>
+                <p class="portfolio-text">Приложение</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-5.jpg" alt="Веб-сайт" width="370" height="294" />
-              <h2 class="portfolio-title">Inspiration has no Borders</h2>
-              <p>Веб-сайт</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Inspiration has no Borders</h2>
+                <p>Веб-сайт</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-6.jpg" alt="Издание Limited Edition" width="370" height="294" />
-              <h2 class="portfolio-title">Издание Limited Edition</h2>
-              <p class="portfolio-text">Дизайн</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Издание Limited Edition</h2>
+                <p class="portfolio-text">Дизайн</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-7.jpg" alt="Проект LAB" width="370" height="294" />
-              <h2 class="portfolio-title">Проект LAB</h2>
-              <p class="portfolio-text">Маркетинг</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Проект LAB</h2>
+                <p class="portfolio-text">Маркетинг</p>
+              </div>
             </li>
-            <li>
+            <li class="card-item">
               <img src="./portfolio-images/img-8.jpg" alt="Приложение" width="370" height="294" />
-              <h2 class="portfolio-title">Growing Business</h2>
-              <p class="portfolio-text">Приложение</p>
+              <div class="portfolio-content">
+                <h2 class="portfolio-title">Growing Business</h2>
+                <p class="portfolio-text">Приложение</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -101,17 +120,21 @@
     </main>
     <!-- Подвал -->
     <footer class="footer">
-      <div class="container footer-nav">
-        <a class="logo link footer" href="./index.html"
-          ><span class="web-logo">Web</span><span class="web-studio">Studio</span></a
-        >
-        <address class="footer-address">
-          <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
-          <ul class="footer list">
-            <li class="footer-item"><a class="footer-link link" href="mailto:info@example.com">info@example.com</a></li>
-            <li class="footer-item"><a class="footer-link link" href="tel:+380991111111">+38 099 111 11 11</a></li>
-          </ul>
-        </address>
+      <div class="container">
+        <div class="footer-nav">
+          <a class="logo link footer" href="./index.html"
+            ><span class="web-logo">Web</span><span class="web-studio">Studio</span></a
+          >
+          <address class="footer-address">
+            <p class="footer-text">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="footer list">
+              <li class="footer-item">
+                <a class="footer-link link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="footer-item"><a class="footer-link link" href="tel:+380991111111">+38 099 111 11 11</a></li>
+            </ul>
+          </address>
+        </div>
       </div>
     </footer>
   </body>
