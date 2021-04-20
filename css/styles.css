@@ -33,6 +33,7 @@ h5,
 h6,
 p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 img {
   display: block;
@@ -127,8 +128,29 @@ img {
 .tel-nav .link:hover {
   color: var(--accent-color);
 }
-
+.icon-envelope{
+  width: 16px;
+  height: 12px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+.icon-smartphone{
+  width: 10px;
+  height: 16px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+.tel-nav .link:hover .icon-envelope{
+   fill: var(--accent-color);
+}
 /* hero */
+.overlay{
+  max-width: 1600px;
+  height: 600px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/bg.jpg);
+  background-size: cover;
+
+}
 .hero-section {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -173,12 +195,15 @@ img {
 }
 .features.list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 .features-item {
-  width: 270px;
-}
-.features-item:not(:last-child) {
-  margin-right: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  flex-basis: calc((100%  - 4 * var(--card-set-gap)) / 4);
+  
 }
 .features-list-title {
   margin-bottom: 10px;
@@ -287,11 +312,15 @@ img {
 .footer-address {
   margin-top: 20px;
 }
-.footer-item {
-  margin-top: 9px;
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .logo.link.footer {
   margin: 0;
+}
+.footer-item .link:focus,
+.footer-item .link:hover {
+  color: var(--accent-color);
 }
 
 /* PORTFOLIO STYLLE */
