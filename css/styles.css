@@ -10,6 +10,7 @@
   --title-font: 'Raleway', sans-serif;
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --card-set-gap: 30px;
+  --icon-link-color: #afb1b8;
 }
 html {
   box-sizing: border-box;
@@ -133,13 +134,13 @@ img {
 .icon-envelope {
   width: 16px;
   height: 12px;
-  stroke: currentColor;
+  fill: currentColor;
   margin-right: 10px;
 }
 .icon-smartphone {
   width: 10px;
   height: 16px;
-  stroke: currentColor;
+  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -236,7 +237,8 @@ img {
 }
 /* Чем мы занимаемся */
 .work-title,
-.comand-title {
+.comand-title,
+.client-title {
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -300,26 +302,27 @@ img {
   margin-right: 10px;
 }
 .social-icon-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--primery-bg-color);
-  fill: currentColor;
+  color: var(--icon-link-color);
+}
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--accent-color);
 }
 .social-icon-link:hover .social-icons-svg,
 .social-icon-link:focus .social-icons-svg {
   fill: var(--main-heading-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0, 0.25);
-  border-radius: 50%;
 }
 .social-icons-svg {
   width: 20px;
   height: 20px;
-  fill: #afb1b8;
+  fill: currentColor;
 }
 /* Футер */
 .footer {
@@ -363,7 +366,17 @@ img {
 .footer-item .link:hover {
   color: var(--accent-color);
 }
-
+.features-list-title.conect {
+  color: var(--main-heading-color);
+  margin-bottom: 20px;
+}
+.social-icon-link.conect {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--main-heading-color);
+}
+.social-icon-link.conect:hover {
+  background-color: var(--accent-color);
+}
 /* PORTFOLIO STYLLE */
 .portfolio-button {
   display: inline-block;
@@ -422,8 +435,44 @@ img {
 .portfolio.item {
   flex-basis: calc((100% - 3 * var(--card-set-gap)) / 3);
 }
-.cards.link:hover,
-.cards.link:focus {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0, 06), 1px 4px 6px 0px rgba(0, 0, 0, 0, 16),
-    0px 1px 1px 0px rgba(0, 0, 0, 0, 12);
+.portfolio.item:hover,
+.portfolio.item:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+/* Постоянные клиенты  */
+.clients {
+  background-color: var(--primery-bg-color);
+}
+.client-title {
+  margin-bottom: 50px;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--icon-link-color);
+  border-radius: 4px;
+  color: var(--icon-link-color);
+}
+.clients-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+}
+.clients.list {
+  display: flex;
+}
+.clients-item:not(:last-child) {
+  margin-right: var(--card-set-gap);
+}
+.container.footer {
+  display: flex;
+  align-items: baseline;
 }
