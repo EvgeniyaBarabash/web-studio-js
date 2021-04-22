@@ -133,13 +133,13 @@ img {
 .icon-envelope {
   width: 16px;
   height: 12px;
-  fill: currentColor;
+  stroke: currentColor;
   margin-right: 10px;
 }
 .icon-smartphone {
   width: 10px;
   height: 16px;
-  fill: currentColor;
+  stroke: currentColor;
   margin-right: 10px;
 }
 
@@ -300,19 +300,21 @@ img {
   margin-right: 10px;
 }
 .social-icon-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--primery-bg-color);
+  fill: currentColor;
 }
 .social-icon-link:hover .social-icons-svg,
 .social-icon-link:focus .social-icons-svg {
   fill: var(--main-heading-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0, 0.25);
+  border-radius: 50%;
 }
 .social-icons-svg {
   width: 20px;
