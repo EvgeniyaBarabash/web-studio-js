@@ -327,6 +327,8 @@ img {
 /* Футер */
 .footer {
   background-color: var(--hero-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-text {
   margin: 0;
@@ -349,9 +351,7 @@ img {
   color: var(--main-heading-color);
 }
 .footer-nav {
-  width: calc(100% / 12 * 3);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  margin-right: 70px;
 }
 .footer-address {
   margin-top: 20px;
@@ -359,7 +359,7 @@ img {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
-.logo.link.footer {
+.logo.link.down {
   margin: 0;
 }
 .footer-item .link:focus,
@@ -475,7 +475,7 @@ img {
 .clients-item:not(:last-child) {
   margin-right: var(--card-set-gap);
 }
-.container.footer {
+.container.down {
   display: flex;
   align-items: baseline;
 }
