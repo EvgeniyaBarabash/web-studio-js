@@ -11,6 +11,8 @@
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --card-set-gap: 30px;
   --icon-link-color: #afb1b8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-duration: 250ms;
 }
 html {
   box-sizing: border-box;
@@ -97,6 +99,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--transition-duration) var(--timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -109,7 +112,19 @@ img {
 .site-nav .nav-item:not(:last-child) {
   margin-right: 50px;
 }
-
+.nav-item {
+  position: relative;
+}
+.nav-item .link.current::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -3px;
+}
 /* tel nav ХЕДЕР */
 .tel-nav {
   display: flex;
@@ -126,6 +141,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color var(--transition-duration) var(--timing-function);
 }
 .tel-nav .link:focus,
 .tel-nav .link:hover {
@@ -263,7 +279,24 @@ img {
 .work.section {
   padding-top: 0;
 }
-
+.work-image {
+  position: relative;
+}
+.work-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--main-heading-color);
+  width: 100%;
+  bottom: 0;
+  height: 70px;
+}
+.features-list-title.work {
+  color: var(--main-heading-color);
+  margin-bottom: 0;
+}
 /* Наша команда */
 .comand {
   background-color: var(--comand-bg-color);
@@ -310,6 +343,7 @@ img {
   border-radius: 50%;
   background-color: var(--primery-bg-color);
   color: var(--icon-link-color);
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 .social-icon-link:hover,
 .social-icon-link:focus {
@@ -346,6 +380,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-link-color);
+  transition: color var(--transition-duration) var(--timing-function);
 }
 .web-studio {
   color: var(--main-heading-color);
@@ -391,6 +426,9 @@ img {
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color var(--transition-duration) var(--timing-function),
+    color var(--transition-duration) var(--timing-function),
+    box-shadow var(--transition-duration) var(--timing-function);
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -437,10 +475,38 @@ img {
 }
 .cards.link {
   display: block;
+  transition: box-shadow var(--transition-duration) var(--timing-function);
 }
 .cards.link:hover,
 .cards.link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+.thumb-text {
+  display: flex;
+  align-items: center;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform var(--transition-duration) var(--timing-function);
+}
+.thumb:hover .thumb-text {
+  transform: translateY(0);
+}
+.thumb-text-typ {
+  font-style: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.56;
+  color: var(--main-heading-color);
 }
 /* Постоянные клиенты  */
 .clients {
@@ -459,6 +525,8 @@ img {
   border: 1px solid var(--icon-link-color);
   border-radius: 4px;
   color: var(--icon-link-color);
+  transition: color var(--transition-duration) var(--timing-function),
+    border-color var(--transition-duration) var(--timing-function);
 }
 .clients-link:hover {
   color: var(--accent-color);
