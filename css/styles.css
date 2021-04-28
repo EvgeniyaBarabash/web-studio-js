@@ -85,7 +85,7 @@ img {
 }
 .header-nav > .logo {
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 }
 .page-header {
   border: 1px solid #ececec;
@@ -123,7 +123,7 @@ img {
   background-color: var(--accent-color);
   border-radius: 2px;
   position: absolute;
-  bottom: -3px;
+  bottom: -1px;
 }
 /* tel nav ХЕДЕР */
 .tel-nav {
@@ -546,4 +546,49 @@ img {
 .container.down {
   display: flex;
   align-items: baseline;
+}
+/* Модальное окно */
+.close-black {
+  width: 11px;
+  height: 11px;
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-heading-color);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--transition-duration) var(--timing-function);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden.modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-duration) var(--timing-function);
+  border-radius: 4px;
+  background-color: var(--primery-bg-color);
 }
