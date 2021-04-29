@@ -85,15 +85,15 @@ img {
 }
 .header-nav > .logo {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 }
 .page-header {
   border: 1px solid #ececec;
 }
 .site-nav .link {
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -343,7 +343,8 @@ img {
   border-radius: 50%;
   background-color: var(--primery-bg-color);
   color: var(--icon-link-color);
-  transition: background-color var(--transition-duration) var(--timing-function);
+  transition: background-color var(--transition-duration) var(--timing-function),
+    color var(--transition-duration) var(--timing-function);
 }
 .social-icon-link:hover,
 .social-icon-link:focus {
@@ -352,6 +353,11 @@ img {
 .social-icon-link:hover .social-icons-svg,
 .social-icon-link:focus .social-icons-svg {
   fill: var(--main-heading-color);
+}
+.social-icons-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 .social-icons-svg {
   width: 20px;
@@ -372,6 +378,7 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition: color var(--transition-duration) var(--timing-function);
 }
 .footer-link {
   font-style: normal;
