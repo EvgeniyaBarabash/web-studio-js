@@ -12,7 +12,7 @@
   --card-set-gap: 30px;
   --icon-link-color: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-duration: 250ms;
+  --transition-duration: 1000ms;
 }
 html {
   box-sizing: border-box;
@@ -196,6 +196,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 /* Особенности */
 
@@ -419,6 +420,43 @@ img {
 .social-icon-link.conect:hover {
   background-color: var(--accent-color);
 }
+.form-feald-footer {
+  margin-left: 93px;
+}
+.form-feald {
+  margin-right: 12px;
+}
+.form-feald-footer .features-list-title {
+  color: var(--main-heading-color);
+  margin-bottom: 20px;
+}
+.form-footer {
+  display: flex;
+}
+.form-input-footer {
+  display: block;
+  width: 358px;
+  height: 50px;
+  background-color: var(--hero-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.form-input-footer:not(:placeholder-shown) {
+  border: 2px solid var(--accent-color);
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* PORTFOLIO STYLLE */
 .portfolio-button {
   display: inline-block;
@@ -434,8 +472,8 @@ img {
   cursor: pointer;
   border-radius: 4px;
   transition: background-color var(--transition-duration) var(--timing-function),
-    color var(--transition-duration) var(--timing-function),
-    box-shadow var(--transition-duration) var(--timing-function);
+    box-shadow var(--transition-duration) var(--timing-function),
+    color var(--transition-duration) var(--timing-function);
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
