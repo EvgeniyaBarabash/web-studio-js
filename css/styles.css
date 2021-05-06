@@ -255,7 +255,8 @@ img {
 /* Чем мы занимаемся */
 .work-title,
 .comand-title,
-.client-title {
+.client-title,
+.form-title {
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -423,7 +424,7 @@ img {
 .form-feald-footer {
   margin-left: 93px;
 }
-.form-feald {
+.form-label-footer {
   margin-right: 12px;
 }
 .form-feald-footer .features-list-title {
@@ -596,6 +597,7 @@ img {
 .close-black {
   width: 11px;
   height: 11px;
+  fill: black;
 }
 .close-btn {
   position: absolute;
@@ -607,6 +609,7 @@ img {
   width: 30px;
   height: 30px;
   background-color: var(--main-heading-color);
+  fill: #212121;
 }
 .backdrop {
   position: fixed;
@@ -616,6 +619,7 @@ img {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+
   transition: opacity var(--transition-duration) var(--timing-function);
 }
 .backdrop.is-hidden {
@@ -632,8 +636,138 @@ img {
   max-height: 100%;
   top: 50%;
   left: 50%;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition-duration) var(--timing-function);
   border-radius: 4px;
   background-color: var(--primery-bg-color);
+}
+.form-title {
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.form {
+  /* max-width: 528px;
+  height: 581px; */
+  background-color: var(--primery-bg-color);
+}
+.form-feald {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-input {
+  position: relative;
+  width: 448px;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  padding: 12px 15px;
+  padding-left: 42px;
+}
+.textarea {
+  width: 448px;
+  height: 120px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.form-name {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.form-label {
+  margin-bottom: 4px;
+}
+.form-telephon,
+.form-mail,
+.form-coment,
+.form-checkbox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-btn {
+  padding: 10px 55px;
+}
+.form-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--primery-text-color);
+}
+.textarea[placeholder] {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  line-height: 1.17;
+  padding: 12px 16px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primery-text-color);
+  margin-bottom: 30px;
+}
+.conditions {
+  color: var(--accent-color);
+}
+.checkbox-input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+}
+.checkbox-input:checked + .checkbox-label .checkbox-icon {
+  background-color: var(--accent-color);
+  fill: transparent;
+  background-image: url(/images/icon-check.svg);
+  background-size: contain;
+  border-radius: 2px;
+}
+.form-input:focus-within {
+  border: 1px solid rgba(33, 150, 243, 1);
+  outline: none;
+}
+.textarea:focus-within {
+  border: 1px solid rgba(33, 150, 243, 1);
+  outline: none;
+}
+.close-btn:hover {
+  fill: rgba(33, 150, 243, 1);
+}
+.checkbox-icon.name,
+.checkbox-icon.telephone,
+.checkbox-icon.emeil {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 40%;
+  left: 12px;
+}
+.checkbox-icon.name {
+  position: absolute;
+  top: 40%;
+  left: 12px;
+}
+
+.form-input:focus ~ .checkbox-icon {
+  fill: rgba(33, 150, 243, 1);
 }
