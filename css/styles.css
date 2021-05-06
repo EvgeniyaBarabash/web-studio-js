@@ -12,7 +12,7 @@
   --card-set-gap: 30px;
   --icon-link-color: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-duration: 1000ms;
+  --transition-duration: 250ms;
 }
 html {
   box-sizing: border-box;
@@ -597,7 +597,7 @@ img {
 .close-black {
   width: 11px;
   height: 11px;
-  fill: black;
+  color: currentColor;
 }
 .close-btn {
   position: absolute;
@@ -609,7 +609,8 @@ img {
   width: 30px;
   height: 30px;
   background-color: var(--main-heading-color);
-  fill: #212121;
+  color: #212121;
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 .backdrop {
   position: fixed;
@@ -650,17 +651,19 @@ img {
   margin-top: 40px;
 }
 .form {
-  /* max-width: 528px;
-  height: 581px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--primery-bg-color);
 }
-.form-feald {
+/* .form-feald {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 .form-input {
   position: relative;
   width: 448px;
@@ -671,6 +674,7 @@ img {
 
   padding: 12px 15px;
   padding-left: 42px;
+  transition: border-color var(--transition-duration) var(--timing-function);
 }
 .textarea {
   width: 448px;
@@ -679,6 +683,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   margin-bottom: 20px;
   border-radius: 4px;
+  transition: border-color var(--transition-duration) var(--timing-function);
 }
 .form-name {
   display: flex;
@@ -733,6 +738,7 @@ img {
   width: 16px;
   height: 15px;
   margin-right: 8px;
+  transition: fill var(--transition-duration) var(--timing-function);
 }
 .checkbox-input:checked + .checkbox-label .checkbox-icon {
   background-color: var(--accent-color);
@@ -740,16 +746,19 @@ img {
   background-image: url(/images/icon-check.svg);
   background-size: contain;
   border-radius: 2px;
+  transition: background-color var(--transition-duration) var(--timing-function);
 }
 .form-input:focus-within {
   border: 1px solid rgba(33, 150, 243, 1);
   outline: none;
+  transition: border-color var(--transition-duration) var(--timing-function);
 }
 .textarea:focus-within {
   border: 1px solid rgba(33, 150, 243, 1);
   outline: none;
 }
-.close-btn:hover {
+.close-btn:hover .close-black,
+.close-btn:focus .close-black {
   fill: rgba(33, 150, 243, 1);
 }
 .checkbox-icon.name,
