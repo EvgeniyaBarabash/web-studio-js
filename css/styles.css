@@ -743,7 +743,7 @@ img {
 .checkbox-input:checked + .checkbox-label .checkbox-icon {
   background-color: var(--accent-color);
   fill: transparent;
-  background-image: url(/images/icon-check.svg);
+  background-image: url(../images/icon-check.svg);
   background-size: contain;
   border-radius: 2px;
   transition: background-color var(--transition-duration) var(--timing-function);
