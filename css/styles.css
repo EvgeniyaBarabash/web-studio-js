@@ -189,7 +189,6 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.89;
-  text-align: center;
   letter-spacing: 0.06em;
   color: var(--main-heading-color);
   background-color: var(--accent-color);
@@ -441,8 +440,20 @@ img {
   background-color: var(--hero-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 15px 16px;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--main-heading-color);
   border-radius: 4px;
+}
+
+.form-input-footer:-webkit-autofill,
+.form-input-footer:-webkit-autofill:hover,
+.form-input-footer:-webkit-autofill:focus {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-text-fill-color: var(--main-heading-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--hero-bg-color) inset;
+}
+.form-input-footer::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: var(--hero-bg-color);
 }
 .form-input-footer:not(:placeholder-shown) {
   border: 2px solid var(--accent-color);
@@ -610,7 +621,7 @@ img {
   height: 30px;
   background-color: var(--main-heading-color);
   color: #212121;
-  transition: background-color var(--transition-duration) var(--timing-function);
+  transition: color var(--transition-duration) var(--timing-function);
 }
 .backdrop {
   position: fixed;
@@ -657,13 +668,6 @@ img {
   flex-direction: column;
   background-color: var(--primery-bg-color);
 }
-/* .form-feald {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 .form-input {
   position: relative;
   width: 448px;
@@ -724,6 +728,7 @@ img {
   line-height: 1.71;
   color: var(--primery-text-color);
   margin-bottom: 30px;
+  text-align: center;
 }
 .conditions {
   color: var(--accent-color);
@@ -734,19 +739,11 @@ img {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.checkbox-icon {
+.form-icon {
   width: 16px;
   height: 15px;
   margin-right: 8px;
   transition: fill var(--transition-duration) var(--timing-function);
-}
-.checkbox-input:checked + .checkbox-label .checkbox-icon {
-  background-color: var(--accent-color);
-  fill: transparent;
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  border-radius: 2px;
-  transition: background-color var(--transition-duration) var(--timing-function);
 }
 .form-input:focus-within {
   border: 1px solid rgba(33, 150, 243, 1);
@@ -761,9 +758,9 @@ img {
 .close-btn:focus .close-black {
   fill: rgba(33, 150, 243, 1);
 }
-.checkbox-icon.name,
-.checkbox-icon.telephone,
-.checkbox-icon.emeil {
+.form-icon.name,
+.form-icon.telephone,
+.form-icon.emeil {
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -771,12 +768,26 @@ img {
   top: 40%;
   left: 12px;
 }
-.checkbox-icon.name {
-  position: absolute;
-  top: 40%;
-  left: 12px;
-}
 
-.form-input:focus ~ .checkbox-icon {
+.form-input:focus ~ .form-icon {
   fill: rgba(33, 150, 243, 1);
+}
+.checkbox-label::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 3px;
+  margin-right: 8px;
+  display: inline-block;
+  transition: background-color var(--transition-duration) var(--timing-function);
+}
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: background-color var(--transition-duration) var(--timing-function);
 }

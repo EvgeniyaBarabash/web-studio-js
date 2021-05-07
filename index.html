@@ -379,7 +379,7 @@
           <h3 class="features-list-title">Подпишитесь на рассылку</h3>
         <form class="form-footer">
           <label class="form-label-footer">
-            <input type="email" name="email" class="form-input-footer" placeholder="E-mail"></input>
+            <input type="email" name="email" class="form-input-footer" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></input>
           </label>
           <button type="submit" class="btn footer-btn">Подписаться<svg class="footer-icon">
             <use href="./images/icon.svg#icon-send"></use>
@@ -399,32 +399,30 @@
       <form class="form">
         <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
         <div class="form-name">
-        <label for="name" class="form-label form-text">Имя</label>
-        <input type="text" id="name" class="form-input">
-        <svg class="checkbox-icon name">
+        <label for="user-name" class="form-label form-text">Имя</label>
+        <input type="text" id="user-name" class="form-input" pattern="^[a-zA-ZА-Яа-яЁё\s]+$">
+        <svg class="form-icon name">
         <use href="./images/icon.svg#person-black"></use>
       </svg></div>
         <div class="form-telephon">
-        <label for="telephon" class="form-label form-text">Телефон</label>
+        <label for="user-phone" class="form-label form-text">Телефон</label>
         
-        <input type="tel" id="telephon" class="form-input"><svg class="checkbox-icon telephone">
+        <input type="tel" id="user-phone" class="form-input" pattern="[0-9]{5,10}"><svg class="form-icon telephone">
         <use href="./images/icon.svg#phone-black"></use>
       </svg></div>
         <div class="form-mail">
-        <label for="email" class="form-label form-text">Почта</label>
-        <input type="email" id="email" class="form-input"><svg class="checkbox-icon emeil">
+        <label for="user-email" class="form-label form-text">Почта</label>
+        <input type="email" id="user-email" class="form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><svg class="form-icon emeil">
         <use href="./images/icon.svg#email-black"></use>
       </svg></div>
        
         <div class="form-coment">
-           <label for="coment" class="form-text form-label">Комментарий</label>
-        <textarea id="coment" class="textarea" name="coment" placeholder="Введите текст"></textarea></div>
+           <label for="coments" class="form-text form-label">Комментарий</label>
+        <textarea id="coments" class="textarea" name="coments" placeholder="Введите текст"></textarea></div>
       
       <div class="form-checkbox">
       <input type="checkbox" id="checkbox" name="topic" class="checkbox-input">
-      <label for="checkbox" class="checkbox-label" > <svg class="checkbox-icon">
-        <use href="./images/icon.svg#Vector"></use>
-      </svg> Соглашаюсь с рассылкой и принимаю <a href="/" class="conditions"> Условия договора</a></label></div>
+      <label for="checkbox" class="checkbox-label">Соглашаюсь с рассылкой и принимаю<a href="/" class="conditions">  Условия договора</a></label></div>
       <button type="submit" class="btn form-btn">Отправить</button></div></form>
   </div>
     
