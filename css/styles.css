@@ -785,8 +785,9 @@ img {
   background-size: contain;
   transition: background-color var(--transition-duration) var(--timing-function);
 }
-.checkbox-input:focus-within ~ .checkbox-label::before {
+.checkbox-input:focus ~ .checkbox-label::before {
   border: 1px solid rgba(33, 150, 243, 1);
   outline: none;
   transition: border-color var(--transition-duration) var(--timing-function);
+  box-shadow: 0px 0px 0px 2px var(--accent-color);
 }
