@@ -1,13 +1,13 @@
-.logo { 
+.logo {
   @extend %link;
-  display: inline-block
-  margin-right: 93px;
-  color: #000000;
+  display: inline-block;
+  color: $title-text-color;
   font-family: $title-font;
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.2;
+  margin-right: 93px;
+  font-weight: bold;
   letter-spacing: 0.03em;
 }
 .logo__text {
