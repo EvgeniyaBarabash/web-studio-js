@@ -1,0 +1,116 @@
+.footer {
+  background-color: $hero-bg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer--baseline {
+  display: flex;
+  align-items: baseline;
+}
+.footer-nav--position {
+  margin-right: 70px;
+}
+.logo__text--white {
+  color: $main-heading-color;
+}
+.logo__footer {
+  margin: 0;
+}
+.address__list {
+  @extend %list;
+}
+.address--position {
+  margin-top: 20px;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__link {
+  @extend %link;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $footer-link-color;
+  transition: color $transition-duration $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.address__text {
+  @extend %link;
+  margin: 0;
+  color: $main-heading-color;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  transition: color $transition-duration $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.join__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-heading-color;
+  margin-bottom: 20px;
+}
+.social-icons__link--footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $main-heading-color;
+}
+.footer-feald--position {
+  margin-left: 93px;
+}
+.footer-feald__title {
+  @extend .join__title;
+}
+.form-footer {
+  display: flex;
+}
+.form-footer__label {
+  margin-right: 12px;
+}
+.form-footer__input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  background-color: $hero-bg-color;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 16px;
+  color: $main-heading-color;
+  border-radius: 4px;
+}
+.form-footer__input:-webkit-autofill,
+.form-footer__input:-webkit-autofill:hover,
+.form-footer__input:-webkit-autofill:focus {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-text-fill-color: $main-heading-color;
+  -webkit-box-shadow: 0 0 0px 1000px $hero-bg-color inset;
+}
+.form-footer__btn {
+  @extend %button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-footer__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.form-footer__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: $hero-bg-color;
+}
+.form-footer__input:not(:placeholder-shown) {
+  border: 2px solid $accent-color;
+}
