@@ -21,16 +21,16 @@
   padding-bottom: $card-set-gap;
   background-color: $main-heading-color;
 }
-.team__content--name {
+.team__name {
   margin: 0;
   color: $title-text-color;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
-.team__content--position {
-  margin-top: 10px;
+.team__position {
   margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;

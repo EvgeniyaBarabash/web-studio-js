@@ -7,7 +7,7 @@
   display: flex;
   align-items: baseline;
 }
-.footer-nav--position {
+.footer-nav {
   margin-right: 70px;
 }
 .logo__text--white {
@@ -19,7 +19,7 @@
 .address__list {
   @extend %list;
 }
-.address--position {
+.address {
   margin-top: 20px;
 }
 .address__item:not(:last-child) {
@@ -54,6 +54,9 @@
     color: $accent-color;
   }
 }
+.join {
+  margin-right: 93px;
+}
 .join__title {
   font-weight: 700;
   font-size: 14px;
@@ -66,9 +69,6 @@
 .social-icons__link--footer {
   background-color: rgba(255, 255, 255, 0.1);
   color: $main-heading-color;
-}
-.footer-feald--position {
-  margin-left: 93px;
 }
 .footer-feald__title {
   @extend .join__title;

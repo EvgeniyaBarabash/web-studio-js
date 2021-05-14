@@ -5,8 +5,6 @@
   @extend %list;
   display: flex;
   justify-content: center;
-}
-.filter__list--position {
   margin-bottom: 50px;
 }
 .filter__button {
@@ -51,14 +49,14 @@
   }
 }
 
-.thumb {
+.portfolio__thumb {
   position: relative;
   overflow: hidden;
-  &:hover .thumb-description {
+  &:hover .portfolio__overlay {
     transform: translateY(0);
   }
 }
-.thumb-description {
+.portfolio__overlay {
   display: flex;
   align-items: center;
   padding: 63px 24px;
@@ -71,21 +69,21 @@
   transform: translateY(100%);
   transition: transform $transition-duration $timing-function;
 }
-.thumb-description__text {
+.portfolio__overlay--text {
   font-style: $main-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.56;
   color: $main-heading-color;
 }
-.portfolio-content__text {
+.portfolio__text {
   color: $primery-text-color;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
-.portfolio-content__title {
+.portfolio__title {
   padding-bottom: 4px;
   margin: 0;
   color: $title-text-color;
@@ -94,7 +92,7 @@
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-content {
+.portfolio__content {
   padding: 20px 24px;
   background: $primery-bg-color;
   border: 1px solid #eeeeee;
