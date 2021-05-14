@@ -3,13 +3,14 @@
   align-items: center;
   border-bottom: 1px solid #ececec;
 }
+.container.page-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
 .nav {
   display: flex;
   align-items: center;
-  .logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-  }
 }
 .nav__list {
   @extend %list;
@@ -24,8 +25,6 @@
 .nav__link {
   @extend %link;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: $title-text-color;
   font-weight: 500;
   font-size: 14px;
@@ -48,7 +47,7 @@
   background-color: $accent-color;
   border-radius: 2px;
   position: absolute;
-  bottom: -1px;
+  bottom: -33px;
 }
 .contacts__list {
   @extend %list;
