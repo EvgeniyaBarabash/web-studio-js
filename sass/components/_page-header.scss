@@ -1,11 +1,11 @@
 .page-header {
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid #ececec;
 }
-.container.page-header {
+.container.header {
+  display: flex;
+  align-items: center;
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 }
 
 .nav {
@@ -47,7 +47,7 @@
   background-color: $accent-color;
   border-radius: 2px;
   position: absolute;
-  bottom: -33px;
+  bottom: -32px;
 }
 .contacts__list {
   @extend %list;

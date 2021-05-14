@@ -470,18 +470,18 @@ img {
 }
 
 .page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.container.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #ececec;
-}
-
-.container.page-header {
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 }
 
 .nav {
@@ -534,7 +534,7 @@ img {
   background-color: #2196f3;
   border-radius: 2px;
   position: absolute;
-  bottom: -33px;
+  bottom: -32px;
 }
 
 .contacts__list {
