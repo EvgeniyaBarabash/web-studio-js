@@ -1,23 +1,32 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: $hero-bg-color;
   text-align: center;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg.jpg);
   background-size: cover;
-
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
   &__title {
-    max-width: 696px;
+    max-width: 360px;
     margin: 0 auto;
     margin-bottom: $card-set-gap;
     color: $main-heading-color;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+      max-width: 696px;
+    }
   }
   &__btn {
     @extend %button;

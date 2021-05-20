@@ -1,17 +1,27 @@
 .features {
   @extend %section;
+  @media screen and (max-width: 1199.98px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .features__list {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * (#{$card-set-gap}));
-  margin-top: calc(-1 * (#{$card-set-gap}));
+  @extend %card-set;
 }
 .features__item {
   margin-top: $card-set-gap;
   margin-left: $card-set-gap;
-  flex-basis: calc((100% - 4 * (#{$card-set-gap})) / 4);
+
+  @media screen and (min-width: 480px) {
+    flex-basis: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * (#{$card-set-gap})) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * (#{$card-set-gap})) / 4);
+  }
 }
 .features__title {
   margin-bottom: 10px;
@@ -21,6 +31,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $title-text-color;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    text-align: center;
+  }
 }
 .features__text {
   font-weight: 400;
@@ -33,9 +46,18 @@
   justify-content: center;
   align-items: center;
   margin-bottom: $card-set-gap;
-  width: 270px;
+
   height: 120px;
   border: 1px solid transparent;
   background-color: $comand-bg-color;
   border-radius: 4px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }

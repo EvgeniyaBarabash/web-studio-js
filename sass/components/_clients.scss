@@ -1,16 +1,44 @@
 .clients {
-  @extend %section;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $primery-bg-color;
-  &__title {
-    @extend %title;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.clients__title {
+  margin-bottom: 30px;
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 .clients__list {
   @extend %list;
-  display: flex;
-}
-.clients__item:not(:last-child) {
-  margin-right: $card-set-gap;
+  @extend %card-set;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .clients__item {
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
+
+    @media screen and (min-width: 320px) {
+      flex-basis: calc((100% - 2 * (#{$card-set-gap})) / 2);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      flex-basis: calc((100% - 3 * (#{$card-set-gap})) / 3);
+    }
+  }
 }
 .clients__link {
   @extend %link;

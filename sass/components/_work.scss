@@ -4,6 +4,9 @@
   &__title {
     @extend %title;
   }
+  @media screen and (max-width: 1199.98px) {
+    display: none;
+  }
 }
 .work__list {
   @extend %list;

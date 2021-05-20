@@ -2,13 +2,25 @@
   background-color: $hero-bg-color;
   padding-top: 60px;
   padding-bottom: 60px;
+  @media screen and (max-width: 1200px) {
+    text-align: center;
+  }
 }
 .footer--baseline {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 .footer-nav {
-  margin-right: 70px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 .logo__text--white {
   color: $main-heading-color;
@@ -55,7 +67,12 @@
   }
 }
 .join {
-  margin-right: 93px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 .join__title {
   font-weight: 700;
@@ -70,11 +87,26 @@
   background-color: rgba(255, 255, 255, 0.1);
   color: $main-heading-color;
 }
+.footer-feald {
+  @media screen and (min-width: 768px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 1199.98px) {
+    margin-top: 60px;
+  }
+}
 .footer-feald__title {
   @extend .join__title;
 }
 .form-footer {
-  display: flex;
+  @media screen and (max-width: 1199.98px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .form-footer__label {
   margin-right: 12px;
@@ -94,13 +126,21 @@
 .form-footer__input:-webkit-autofill:focus {
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-text-fill-color: $main-heading-color;
-  -webkit-box-shadow: 0 0 0px 1000px $hero-bg-color inset;
+  // -webkit-box-shadow: 0 0 0px 1000px $hero-bg-color inset;
 }
 .form-footer__btn {
   @extend %button;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @media screen and (max-width: 1199.98px) {
+    margin-top: 20px;
+    max-width: 200px;
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .form-footer__icon {
   width: 24px;
