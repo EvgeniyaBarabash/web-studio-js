@@ -19,8 +19,7 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+
   max-height: 100%;
   top: 50%;
   left: 50%;
@@ -32,6 +31,14 @@
   transition: transform $transition-duration $timing-function;
   border-radius: 4px;
   background-color: $primery-bg-color;
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    width: 450px;
+    height: 609px;
+  }
 }
 .modal__btn {
   position: absolute;
@@ -45,6 +52,7 @@
   background-color: $main-heading-color;
   fill: #212121;
   transition: fill $transition-duration $timing-function;
+  z-index: 10;
 }
 .modal__icon {
   width: 11px;
@@ -69,8 +77,6 @@
 }
 .form__input {
   position: relative;
-  width: 448px;
-  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
@@ -79,6 +85,14 @@
     border: 1px solid rgba(33, 150, 243, 1);
     outline: none;
     transition: border-color $transition-duration $timing-function;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+    height: 40px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    width: 370px;
+    height: 40px;
   }
 }
 
@@ -113,8 +127,6 @@
   fill: rgba(33, 150, 243, 1);
 }
 .form-coment__textarea {
-  width: 448px;
-  height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   margin-bottom: 20px;
@@ -123,6 +135,14 @@
   &:focus-within {
     border: 1px solid rgba(33, 150, 243, 1);
     outline: none;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+    height: 120px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    width: 370px;
+    height: 120px;
   }
 }
 .form-coment__textarea[placeholder] {
@@ -134,11 +154,18 @@
 .form-checkbox__label {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+
   color: $primery-text-color;
   margin-bottom: 30px;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  @media screen and (max-width: 1199.98px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .form-checkbox__label--blue {
   color: $accent-color;

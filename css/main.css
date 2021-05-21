@@ -501,6 +501,13 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .container.header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -553,19 +560,40 @@ img {
   bottom: -32px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .nav__link--current::after {
+    bottom: -28px;
+  }
+}
+
 .contacts__list {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .contacts__list {
     display: flex;
     margin-left: auto;
   }
 }
 
-.contacts__item:last-child {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contacts__item:last-child {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .contacts__link {
@@ -573,10 +601,17 @@ img {
   align-items: center;
   color: #757575;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .contacts__link:hover, .contacts__link:focus {
@@ -936,7 +971,7 @@ img {
   padding-bottom: 60px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199.98px) {
   .footer {
     text-align: center;
   }
@@ -1035,7 +1070,7 @@ img {
   color: #ffffff;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer-feald {
     text-align: center;
   }
@@ -1067,13 +1102,25 @@ img {
 
 .form-footer__input {
   display: block;
-  width: 358px;
-  height: 50px;
+  width: 100%;
+  max-height: 50px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 15px 16px;
   color: #ffffff;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199.98px) {
+  .form-footer__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-footer__input {
+    width: 358px;
+  }
 }
 
 .form-footer__input:-webkit-autofill,
@@ -1137,8 +1184,6 @@ img {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
   max-height: 100%;
   top: 50%;
   left: 50%;
@@ -1149,6 +1194,20 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   background-color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 
 .modal__btn {
@@ -1163,6 +1222,7 @@ img {
   background-color: #ffffff;
   fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
 }
 
 .modal__icon {
@@ -1191,8 +1251,6 @@ img {
 
 .form__input {
   position: relative;
-  width: 448px;
-  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
@@ -1203,6 +1261,20 @@ img {
   border: 1px solid #2196f3;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .form__input {
+    width: 448px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .form__input {
+    width: 370px;
+    height: 40px;
+  }
 }
 
 .form__label {
@@ -1240,8 +1312,6 @@ img {
 }
 
 .form-coment__textarea {
-  width: 448px;
-  height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   margin-bottom: 20px;
@@ -1254,6 +1324,20 @@ img {
   outline: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .form-coment__textarea {
+    width: 448px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .form-coment__textarea {
+    width: 370px;
+    height: 120px;
+  }
+}
+
 .form-coment__textarea[placeholder] {
   color: rgba(117, 117, 117, 0.5);
   font-size: 14px;
@@ -1264,11 +1348,23 @@ img {
 .form-checkbox__label {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
   color: #757575;
   margin-bottom: 30px;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .form-checkbox__label {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .form-checkbox__label--blue {
@@ -1315,8 +1411,22 @@ img {
 
 .filter__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter__list {
+    margin-bottom: 40px;
+    justify-content: start;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .filter__list {
+    margin-bottom: 30px;
+  }
 }
 
 .filter__button {
@@ -1341,8 +1451,32 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (max-width: 767px) {
+  .filter__button {
+    margin-bottom: 15px;
+  }
+}
+
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio__item {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    flex-basis: calc((100% - 2 * (30px)) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio__item {
+    flex-basis: calc((100% - 3 * (30px)) / 3);
+  }
 }
 
 .portfolio__link {
@@ -1422,6 +1556,10 @@ img {
   z-index: 3;
 }
 
+.mobile-menu__btn:hover, .mobile-menu__btn:focus {
+  fill: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
   .mobile-menu__btn {
     display: none;
@@ -1457,6 +1595,10 @@ img {
   text-align: center;
 }
 
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: #2196f3;
+}
+
 .mobile-menu__item:not(:last-child),
 .mobile-contacts__item:not(:last-child) {
   margin-bottom: 32px;
@@ -1479,6 +1621,10 @@ img {
   color: #757575;
 }
 
+.mobile-contacts__link:hover, .mobile-contacts__link:focus {
+  color: #2196f3;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -1490,10 +1636,13 @@ img {
   z-index: 2;
   padding: 48px 40px;
   overflow-y: scroll;
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu.is-open {
   display: block;
+  transform: translateX(0);
 }
 
 @media screen and (max-width: 767px) {

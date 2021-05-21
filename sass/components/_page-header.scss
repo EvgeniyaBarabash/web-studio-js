@@ -13,6 +13,10 @@
     padding-top: 24px;
     padding-bottom: 23px;
   }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .nav {
   display: flex;
@@ -57,17 +61,31 @@
   border-radius: 2px;
   position: absolute;
   bottom: -32px;
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    bottom: -28px;
+  }
 }
 .contacts__list {
   @extend %list;
   display: none;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
     display: flex;
     margin-left: auto;
   }
 }
 .contacts__item:last-child {
-  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
+}
+.contacts__item:not(:last-child) {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    margin-bottom: 10px;
+  }
 }
 .contacts__link {
   @extend %link;
@@ -75,10 +93,14 @@
   align-items: center;
   color: $primery-text-color;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   transition: color $transition-duration $timing-function;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
   &:hover,
   &:focus {
     color: $accent-color;
