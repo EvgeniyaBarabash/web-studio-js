@@ -630,7 +630,6 @@ img {
   text-align: center;
   max-width: 1600px;
   height: 400px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg.jpg);
   background-size: cover;
 }
 
@@ -639,6 +638,18 @@ img {
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-bg@1x.jpg);
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-bg@2x.jpg);
   }
 }
 
