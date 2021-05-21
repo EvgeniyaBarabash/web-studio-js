@@ -14,7 +14,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="container header">
         <nav class="nav">
           <a class="logo" href="./index.html"><span class="logo__text">Web</span>Studio</a>
@@ -28,9 +28,35 @@
           <li class="contacts__item"><a class="contacts__link" href="mailto:info@devstudio.com"><svg class="contacts__icon" width="16" height="12"><use href="./images/icon.svg#envelope "></use></svg>info@devstudio.com</a></li>
           <li class="contacts__item"><a class="contacts__link" href="tel:+380961111111"><svg class="contacts__icon"  width="10" height="16"><use href="./images/icon.svg#smartphone"></use></svg>+38 096 111 11 11</a></li>
         </ul>
-        
+    <button class="mobile-menu__btn" data-menu-button aria-expanded="false">
+      <svg width="40" height="40" class="mobile-menu__icon" aria-label="Переключатель мобильного меню">
+        <use class="mobile-menu__icon--menu" href="./images/icon.svg#menu-icon"></use>
+         <use class="mobile-menu__icon--close" href="./images/icon.svg#close-black2"></use>
+      </svg>
+    </button>
       </div>
-    </header> -->
+    <div class="mobile-menu" data-menu>
+<ul class="mobile-menu__list">
+            <li class="mobile-menu__item"><a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студия</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="./portfolio.html">Портфолио</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="mobile-contacts__list">
+          <li class="mobile-contacts__item"><a class="mobile-contacts__link--tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+          <li class="mobile-contacts__item"><a class="mobile-contacts__link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          
+        </ul>
+        <ul class="mobile-socials__list">
+          <li class="mobile-socials__item"> <a class="mobile-socials__link" href="https://www.instagram.com/" rel="noopener noreferrer" target="_blank">Instagram</a> </li>
+          <li class="mobile-socials__item"> <a class="mobile-socials__link" href="https://twitter.com/" rel="noopener noreferrer" target="_blank">Twitter</a> </li>
+          <li class="mobile-socials__item"> <a class="mobile-socials__link" href="https://uk-ua.facebook.com/" rel="noopener noreferrer" target="_blank">Facebook</a> </li>
+          <li class="mobile-socials__item"> <a class="mobile-socials__link" href="https://ua.linkedin.com/" rel="noopener noreferrer" target="_blank">LinkedIn</a> </li>
+        </ul>   
+    </div>
+    
+
+    </header> 
     <!-- Герой -->
     <main>
        <section class="hero">
@@ -418,5 +444,6 @@
   </div> -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

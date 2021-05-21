@@ -1,20 +1,29 @@
 .page-header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 .container.header {
   display: flex;
-  align-items: center;
-  padding-top: 24px;
-  padding-bottom: 23px;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 23px;
+  }
 }
-
 .nav {
   display: flex;
   align-items: center;
 }
 .nav__list {
   @extend %list;
-  display: flex;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 .nav__item {
   position: relative;
@@ -51,8 +60,11 @@
 }
 .contacts__list {
   @extend %list;
-  display: flex;
-  margin-left: auto;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: auto;
+  }
 }
 .contacts__item:last-child {
   margin-left: 50px;
