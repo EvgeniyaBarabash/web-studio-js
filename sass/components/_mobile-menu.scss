@@ -40,8 +40,8 @@
 .mobile-socials__link {
   @extend %link;
 }
-.mobile-menu__list {
-  margin-bottom: 302px;
+.mob-menu {
+  margin-bottom: 50px;
 }
 .mobile-socials__link {
   color: $accent-color;
@@ -50,7 +50,6 @@
   color: rgba(33, 33, 33, 1);
   font-weight: 500;
   font-size: 40px;
-  line-height: 1.18px;
   letter-spacing: 0.02em;
   text-align: center;
   &:hover,
@@ -66,14 +65,12 @@
   color: $accent-color;
   font-weight: 500;
   font-size: 34px;
-  line-height: 1.18px;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
 .mobile-contacts__link {
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
   letter-spacing: 0.02em;
   color: $primery-text-color;
   &:hover,
@@ -91,12 +88,14 @@
   display: none;
   z-index: 2;
   padding: 48px 40px;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   transform: translateX(100%);
   transition: transform $transition-duration $timing-function;
 
   &.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transform: translateX(0);
   }
   @media screen and (max-width: 767px) {
