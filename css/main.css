@@ -1241,6 +1241,7 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   background-color: #ffffff;
+  overflow-y: scroll;
 }
 
 @media screen and (min-width: 1200px) {

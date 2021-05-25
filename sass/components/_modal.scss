@@ -32,6 +32,7 @@
   transition: transform $transition-duration $timing-function;
   border-radius: 4px;
   background-color: $primery-bg-color;
+  overflow-y: scroll;
   @media screen and (min-width: 1200px) {
     width: 528px;
   }
