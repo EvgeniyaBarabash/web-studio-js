@@ -101,3 +101,6 @@ img {
   margin-left: $card-set-gap;
   flex-basis: calc((100% - 3 * (#{$card-set-gap})) / 3);
 }
+.menu-is-open {
+  overflow: hidden;
+}
