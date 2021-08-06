@@ -1618,6 +1618,10 @@ img {
   border: 1px solid #eeeeee;
 }
 
+.filter__button.activeBtn {
+  background-color: blue;
+}
+
 .mobile-menu__btn {
   display: inline-flex;
   margin: 0;
