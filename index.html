@@ -547,7 +547,7 @@
         <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
         <div class="form-name">
           <label for="user-name" class="form__label form-text">Имя</label>
-          <input type="text" id="user-name" class="form__input" pattern="^[a-zA-ZА-Яа-яЁё\s]+$">
+          <input name="name" type="text" id="user-name" class="form__input" pattern="^[a-zA-ZА-Яа-яЁё\s]+$">
           <svg class="form__icon" width="18px" height="18px">
             <use href="./images/icon.svg#person-black"></use>
           </svg>
@@ -555,14 +555,14 @@
         <div class="form-telephon">
           <label for="user-phone" class="form__label form-text">Телефон</label>
 
-          <input type="tel" id="user-phone" class="form__input" pattern="[0-9]{5,10}"><svg class="form__icon"
+          <input name="telephone" type="tel" id="user-phone" class="form__input" pattern="[0-9]{5,10}"><svg class="form__icon"
             width="18px" height="18px">
             <use href="./images/icon.svg#phone-black"></use>
           </svg>
         </div>
         <div class="form-mail">
           <label for="user-email" class="form__label form-text">Почта</label>
-          <input type="email" id="user-email" class="form__input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><svg
+          <input name="email" type="email" id="user-email" class="form__input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><svg
             class="form__icon" width="18px" height="18px">
             <use href="./images/icon.svg#email-black"></use>
           </svg>
@@ -570,11 +570,11 @@
 
         <div class="form-coment">
           <label for="coments" class="form-text form__label">Комментарий</label>
-          <textarea id="coments" class="form-coment__textarea" name="coments" placeholder="Введите текст"></textarea>
+          <textarea name="message" id="coments" class="form-coment__textarea" name="coments" placeholder="Введите текст"></textarea>
         </div>
 
         <div class="form-checkbox">
-          <input type="checkbox" id="checkbox" name="topic" class="form-checkbox__input">
+          <input name="checkbox" type="checkbox" id="checkbox" name="topic" class="form-checkbox__input">
           <label for="checkbox" class="form-checkbox__label">Соглашаюсь с рассылкой и принимаю<a href="/"
               class="form-checkbox__label--blue"> Условия договора</a></label>
         </div>
@@ -585,7 +585,7 @@
 
   <script src="./js/modal.js" type="module"></script>
   <script src="./js/menu.js" type="module"></script>
- 
+ <script src="./js/form.js" type="module"></script>
 </body>
 
 </html>

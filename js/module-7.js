@@ -9,12 +9,12 @@ allBtn.forEach((btn)=>btn.addEventListener('click', (event)=>{
 // INPUT===============
 const input = document.querySelector('[type="email"]');
 console.log(input);
-// input.addEventListener('input',(ewt)=>{
-//     console.log(ewt.target.value);
-// });
-// input.addEventListener('change',(e)=>{
-//     console.log(e.target.value)
-// });
+input.addEventListener('input',(ewt)=>{
+    console.log(ewt.target.value);
+});
+input.addEventListener('change',(e)=>{
+    console.log(e.target.value)
+});
 const form = document.querySelector('.form-footer');
 console.log(form);
 form.addEventListener('submit',(ewt)=>{
