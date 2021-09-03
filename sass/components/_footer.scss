@@ -131,8 +131,7 @@
 .form-footer__input:-webkit-autofill:hover,
 .form-footer__input:-webkit-autofill:focus {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-text-fill-color: $main-heading-color;
-  // -webkit-box-shadow: 0 0 0px 1000px $hero-bg-color inset;
+
 }
 .form-footer__btn {
   @extend %button;
@@ -155,7 +154,6 @@
 }
 .form-footer__input::placeholder {
   color: rgba(255, 255, 255, 0.3);
-  background-color: $hero-bg-color;
 }
 .form-footer__input:not(:placeholder-shown) {
   border: 2px solid $accent-color;
