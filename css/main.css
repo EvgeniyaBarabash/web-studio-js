@@ -416,7 +416,8 @@ img {
   padding-bottom: 94px;
 }
 
-.hero__btn, .form-footer__btn, .form-checkbox__btn {
+.hero__btn, .form-footer__btn, .form-checkbox__btn, .subscribe-subscription,
+.close-subscription {
   padding: 10px 28px;
   font-weight: 700;
   font-size: 16px;
@@ -632,7 +633,6 @@ img {
   padding-bottom: 118px;
   background-color: #2f303a;
   text-align: center;
-  max-width: 1600px;
   height: 400px;
   background-size: cover;
 }
@@ -1470,6 +1470,26 @@ img {
 
 .form-checkbox__btn {
   padding: 10px 55px;
+}
+
+.subscribe-subscription,
+.close-subscription {
+  padding: 10px 28px;
+  margin-top: 20px;
+}
+
+.close-subscription {
+  margin-right: 100px;
+}
+
+.features__text-subscription {
+  text-align: center;
+}
+
+.button-subscription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter__list {
